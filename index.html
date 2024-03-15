@@ -1,31 +1,109 @@
 <!DOCTYPE html>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400");
+
+html *
+{
+    color: #000 !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.about {
+    text-align: justify;
+}
+
+.list-technologies {
+    display: flex;
+}
+
+.item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust font sizes for smaller screens if needed */
+    body {
+        font-size: 1rem;
+    }
+}
+</style>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Gabriel Block Staackmann</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Resume</title>
 </head>
 <body>
-    <header>
-        Jose Gabriel Block Staackmann
-        linkedin
-        fake email
-        github
-    </header>
-
-    <main>
-        1. Software Engineer
-        2. 3 years of experience working on APIs and WebApps that use Bitcoin and Lightning Network to transact 
-        3. 1 year of experience freelancing
-        4. I know a lot of a lifecicle of a project.
-        5. Lenguages I currently use: Golang, JavaScript, TypeScript, HTML, CSS, Python.
-        6. Frontend technologies Vue, Nuxt, Next, React. 
-        7. Backend technologies Gorm, Postgres, MySQL, Django, GRPC. 
-        8. Other technologies Git, AWS, GCP, Jira, Swagger, Postman, Readme.
-    </main>
-    <footer>
-        <!-- Footer information if needed -->
-    </footer>
+    <div class="container">
+        <header>
+            <h1>Jose Block</h1>
+            <p>Software Engineer</p>
+            <p>Contact: john@example.com</p>
+            <!-- linkedin
+            fake email
+            github -->
+        </header>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate mind in search of new learning experiences. 
+                I have been involved in many areas of a projec's lifecicle. 
+                Specially at IBEX Mercado developing Bitcoin and Lightning Network services. 
+                In IBEX I have done frontend, API developing, automated documentation, alert systems from logs to monitors and designated alerts.
+            </p>
+        </section>
+        <section class="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>3 years working as API Engineer at IBEX Mercado </li>
+                <li>1 year working as Frontend Developer on WebApps at IBEX Mercado </li>
+                <li>1 year freelancing projects</li>
+            </ul>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <p>Bachelor's Degree Computer Engineering and Information Technology - Universidad del Valle de Guatemala</p>
+            <p>with a Specialization in Cybersecurity</p>
+        </section>
+        <section class="technologies">
+            <h2>Tenchnologies</h2>
+            <div id="list-technologies">
+            </div>
+        </section>
+        <footer>
+            
+        </footer>
+    </div>
 </body>
 </html>
+
+<script>
+var algo = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Golang", "Vue", "Nuxt", "Next", "React", "Gorm", "Postgres", "MySQL", "Django", "GRPC", "Git", "AWS", "GCP", "Jira", "Swagger", "Postman", "Readme",]
+
+var container = document.getElementById('list-technologies');
+
+// Loop through the list and create a div for each item
+algo.forEach(function(item) {
+    // Create a new div element
+    var div = document.createElement('div');
+    
+    // Assign a class to the div for styling (optional)
+    div.className = 'item';
+
+    // Set the content of the div to the current item in the list
+    div.textContent = item;
+
+    // Append the div to the container
+    container.appendChild(div);
+});
+</script>
