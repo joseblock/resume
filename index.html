@@ -4,7 +4,8 @@
 
 html *
 {
-    color: #000 !important;
+    background-color: #FFFFFF;
+    color: #000000 !important;
     font-family: "Roboto", sans-serif !important;
 }
 
@@ -13,21 +14,47 @@ html *
     padding: 20px;
 }
 
-.about {
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profesion {
+    color: #000000 !important;
+    font-size: 1.2rem;
+    font-weight: bolder !important;
+}
+
+p {
     text-align: justify;
+}
+
+h2, h1 {
+    color: #000000 !important;
+}
+
+a {
+    color: #8B80F9 !important;
 }
 
 .list-technologies {
     display: flex;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
 .item {
-    border: 1px solid #ccc;
+    background-color: #8B80F9;
     border-radius: 10px;
+    color: #FFFFFF !important;
     padding: 0.5rem;
     margin: 0.1rem;
     display: inline-block;
 }
+
 
 @media screen and (max-width: 768px) {
     /* Adjust font sizes for smaller screens if needed */
@@ -46,24 +73,30 @@ html *
 <body>
     <div class="container">
         <header>
-            <h1>Jose Block</h1>
-            <p>Software Engineer</p>
-            <p>Contact: john@example.com</p>
-            <!-- linkedin
-            fake email
-            github -->
+            <div>
+                <h1>Jose Block</h1>
+                <p class="profesion">Software Engineer</p>
+            </div>
+            <div class="list">
+                <a href="https://gt.linkedin.com/in/jose-gabriel-block-staackmann-138050153">Linkedin</a>
+                <a href="https://github.com/joseblock">GitHub</a>
+            </div>
         </header>
         <section class="about">
             <h2>About Me</h2>
             <p>
-                I am a passionate mind in search of new learning experiences. 
-                I have been involved in many areas of a projec's lifecicle. 
-                Specially at IBEX Mercado developing Bitcoin and Lightning Network services. 
-                In IBEX I have done frontend, API developing, automated documentation, alert systems from logs to monitors and designated alerts.
+                I am a passionate mind in search of new learning experiences.
+                A very communicative person, I like to work sharing thoughts and presenting my ideas and concerns.
+                I love solving problems and innovating with solid and effective solutions.
             </p>
         </section>
         <section class="experience">
             <h2>Experience</h2>
+            <p>
+                I have been involved in the many areas of a project's lifecicle. 
+                Specially developing Bitcoin and Lightning Network services. 
+                In IBEX I have done frontend, API developing, automated documentation, alert systems from logs to monitors and designated alerts.
+            </p>
             <ul>
                 <li>3 years working as API Engineer at IBEX Mercado </li>
                 <li>1 year working as Frontend Developer on WebApps at IBEX Mercado </li>
@@ -72,8 +105,8 @@ html *
         </section>
         <section class="education">
             <h2>Education</h2>
-            <p>Bachelor's Degree Computer Engineering and Information Technology - Universidad del Valle de Guatemala</p>
-            <p>with a Specialization in Cybersecurity</p>
+            <p>Bachelor's Degree Computer Engineering and Information Technology with a Major in Cybersecurity</p>
+            <p>- Universidad del Valle de Guatemala</p>
         </section>
         <section class="technologies">
             <h2>Tenchnologies</h2>
@@ -88,12 +121,12 @@ html *
 </html>
 
 <script>
-var algo = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Golang", "Vue", "Nuxt", "Next", "React", "Gorm", "Postgres", "MySQL", "Django", "GRPC", "Git", "AWS", "GCP", "Jira", "Swagger", "Postman", "Readme",]
+var techList = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Golang", "Vue", "Nuxt", "Next", "React", "Gorm", "Postgres", "MySQL", "Django", "GRPC", "Git", "AWS", "GCP", "Jira", "Swagger", "Postman", "Readme",]
 
 var container = document.getElementById('list-technologies');
 
 // Loop through the list and create a div for each item
-algo.forEach(function(item) {
+techList.forEach(function(item) {
     // Create a new div element
     var div = document.createElement('div');
     
