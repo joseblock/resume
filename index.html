@@ -5,13 +5,12 @@
 html *
 {
     background-color: #FFFFFF;
-    color: #000000 !important;
+    color: #83858C !important;
     font-family: "Roboto", sans-serif !important;
 }
 
 .container {
     max-width: 100%;
-    padding: 20px;
 }
 
 header {
@@ -19,22 +18,49 @@ header {
     justify-content: space-between;
 }
 
+section {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.persona{
+    width: 50%;
+}
+
+.joseblock {
+    background-color: #6B2737;
+    border-top-right-radius: 100px; /* Adjust as needed */
+    border-bottom-right-radius: 100px; /* Adjust as needed */
+    color: #EFCA08 !important;
+    font-size: 2rem;
+    width: 100%
+}
+
 .profesion {
-    color: #000000 !important;
+    color: #EFCA08 !important;
     font-size: 1.2rem;
     font-weight: bolder !important;
+    padding: 5px;
+    text-shadow: 0 0 1px #6B2737, 0 0 2px #6B2737, 0 0 3px #6B2737, 0 0 4px #6B2737, 0 0 5px #6B2737, 0 0 6px #6B2737, 0 0 7px #6B2737; /* Glowing effect */
 }
 
 p {
     text-align: justify;
 }
 
-h2, h1 {
-    color: #000000 !important;
+h3, h2 {
+    color: #6B2737 !important;
 }
 
 a {
     color: #8B80F9 !important;
+    text-decoration: none;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.timeline {
+    border-left: 2px dotted #8B80F9;
 }
 
 .list-technologies {
@@ -47,7 +73,7 @@ a {
 }
 
 .item {
-    background-color: #8B80F9;
+    background-color: #EFCA08;
     border-radius: 10px;
     color: #FFFFFF !important;
     padding: 0.5rem;
@@ -56,10 +82,33 @@ a {
 }
 
 
-@media screen and (max-width: 768px) {
-    /* Adjust font sizes for smaller screens if needed */
-    body {
-        font-size: 1rem;
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        max-width: 70%;
+    }
+    .joseblock {
+        font-size: 2.5rem;
+    }
+    .profesion {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+        max-width: 40%;
+    }
+    .joseblock {
+        font-size: 3rem;
+    }
+    .profesion {
+        font-size: 1.5rem;
     }
 }
 </style>
@@ -68,39 +117,48 @@ a {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Jose's Resume</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <div>
-                <h1>Jose Block</h1>
-                <p class="profesion">Software Engineer</p>
+            <div class="persona">
+                <div class="joseblock">Jose Block</div>
+                <div class="profesion">Software Engineer</div>
             </div>
             <div class="list">
+                <a href="https://github.com/joseblock">GitHub(joseblock)</a>
                 <a href="https://gt.linkedin.com/in/jose-gabriel-block-staackmann-138050153">Linkedin</a>
-                <a href="https://github.com/joseblock">GitHub</a>
             </div>
         </header>
         <section class="about">
             <h2>About Me</h2>
             <p>
                 I am a passionate mind in search of new learning experiences.
-                A very communicative person, I like to work sharing thoughts and presenting my ideas and concerns.
+                I am highly communicative. I enjoy collaborating with others, sharing ideas, and addressing concerns.
                 I love solving problems and innovating with solid and effective solutions.
             </p>
         </section>
         <section class="experience">
             <h2>Experience</h2>
-            <p>
-                I have been involved in the many areas of a project's lifecicle. 
-                Specially developing Bitcoin and Lightning Network services. 
-                In IBEX I have done frontend, API developing, automated documentation, alert systems from logs to monitors and designated alerts.
-            </p>
+            <h3>Timeline</h3>
+            <div class="timeline">
+                2024
+                <ul>
+                    <li>2.5 years working as API Engineer at IBEX Mercado </li>
+                    <li>1.5 years working as Frontend Developer on WebApps at IBEX Mercado </li>
+                    <li>1 year freelancing projects</li>
+                </ul>
+                2019
+            </div>
+            <h3>Capabilities</h3>
             <ul>
-                <li>3 years working as API Engineer at IBEX Mercado </li>
-                <li>1 year working as Frontend Developer on WebApps at IBEX Mercado </li>
-                <li>1 year freelancing projects</li>
+                <li> Developing on Bitcoin and Lightning Network services </li>
+                <li> API development </li>
+                <li> Frontend development </li>
+                <li> Automated Documentation </li>
+                <li> Implementing Logs, Traces and Monitors </li>
+                <li> Alerting systmes based on monitoring </li>
             </ul>
         </section>
         <section class="education">
@@ -121,7 +179,7 @@ a {
 </html>
 
 <script>
-var techList = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Golang", "Vue", "Nuxt", "Next", "React", "Gorm", "Postgres", "MySQL", "Django", "GRPC", "Git", "AWS", "GCP", "Jira", "Swagger", "Postman", "Readme",]
+var techList = ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "React", "Nuxt", "Next", "Golang", "Gorm", "Python", "Django", "PHP", "C", "C++", "C#", "R", "Postgres", "MySQL", "GRPC", "MongoDB", "Git", "AWS", "GCP", "Atlassian", "Jira", "Trello", "Notion", "Swagger", "Postman", "Readme", "DataDog", "PagerDuty"]
 
 var container = document.getElementById('list-technologies');
 
