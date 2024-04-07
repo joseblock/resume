@@ -13,54 +13,65 @@ html *
     max-width: 100%;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
 section {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .persona{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .joseblock {
-    background-color: #6B2737;
-    border-top-right-radius: 100px; /* Adjust as needed */
-    border-bottom-right-radius: 100px; /* Adjust as needed */
-    color: #EFCA08 !important;
+    color: #000000 !important;
+    font-weight: bold;
     font-size: 2rem;
-    width: 100%
+    width: 100%;
+    text-align: center;
 }
 
 .profesion {
-    color: #EFCA08 !important;
+    background-color: #EFCA08;
+    color: #FFFFFF !important;
     font-size: 1.2rem;
     font-weight: bolder !important;
-    padding: 5px;
-    text-shadow: 0 0 1px #6B2737, 0 0 2px #6B2737, 0 0 3px #6B2737, 0 0 4px #6B2737, 0 0 5px #6B2737, 0 0 6px #6B2737, 0 0 7px #6B2737; /* Glowing effect */
+    height: 2rem;
+    text-align: center;
 }
 
-p {
+.paragraph {
     text-align: justify;
+    padding: 5px 0px 5px 0px;
+}
+
+.left-p {
+    text-align: right;
 }
 
 h3, h2 {
-    color: #6B2737 !important;
+    color: #000000 !important;
 }
 
 a {
-    color: #8B80F9 !important;
+    align-self: flex-end;
+    color: #000000 !important;
     text-decoration: none;
     width: fit-content;
-    align-self: flex-end;
+}
+
+a:hover {
+    color: #83858C !important;
+    text-decoration: underline;
 }
 
 .timeline {
-    border-left: 2px dotted #8B80F9;
+    border-left: 3px dotted #EFCA08;
+    padding-left: 5px;
+}
+
+.timeline-item {
+    padding: 5px 0px 5px 20px;
 }
 
 .list-technologies {
@@ -75,7 +86,7 @@ a {
 .item {
     background-color: #EFCA08;
     border-radius: 10px;
-    color: #FFFFFF !important;
+    color: #000000 !important;
     padding: 0.5rem;
     margin: 0.1rem;
     display: inline-block;
@@ -123,33 +134,34 @@ a {
     <div class="container">
         <header>
             <div class="persona">
-                <div class="joseblock">Jose Block</div>
+                <div class="profesion"></div>
+                <div class="joseblock">JOSE BLOCK</div>
                 <div class="profesion">Software Engineer</div>
-            </div>
-            <div class="list">
-                <a href="https://github.com/joseblock">GitHub(joseblock)</a>
-                <a href="https://gt.linkedin.com/in/jose-gabriel-block-staackmann-138050153">Linkedin</a>
             </div>
         </header>
         <section class="about">
-            <h2>About Me</h2>
-            <p>
-                I am a passionate mind in search of new learning experiences.
-                I am highly communicative. I enjoy collaborating with others, sharing ideas, and addressing concerns.
-                I love solving problems and innovating with solid and effective solutions.
-            </p>
+            <h2>ABOUT ME</h2>
+            <div>
+                <div class="paragraph">
+                    I am a passionate mind in search of new learning experiences.
+                    I am highly communicative. I enjoy collaborating with others, sharing ideas, and addressing concerns.
+                    I love solving problems and innovating with solid and effective solutions.
+                </div>
+                <div class="list">
+                    <a href="https://github.com/joseblock">GitHub(joseblock)</a>
+                    <a href="https://gt.linkedin.com/in/jose-gabriel-block-staackmann-138050153">Linkedin</a>
+                </div>
+            </div>
         </section>
         <section class="experience">
-            <h2>Experience</h2>
+            <h2>EXPERIENCE</h2>
             <h3>Timeline</h3>
             <div class="timeline">
-                2024
-                <ul>
-                    <li>2.5 years working as API Engineer at IBEX Mercado </li>
-                    <li>1.5 years working as Frontend Developer on WebApps at IBEX Mercado </li>
-                    <li>1 year freelancing projects</li>
-                </ul>
-                2019
+                <div>2024</div>
+                <div class="timeline-item">2.5 years working as API Engineer at IBEX Mercado </div>
+                <div class="timeline-item">1.5 years working as Frontend Developer on WebApps at IBEX Mercado </div>
+                <div class="timeline-item">1 year freelancing projects</div>
+                <div>2019</div>
             </div>
             <h3>Capabilities</h3>
             <ul>
@@ -158,18 +170,22 @@ a {
                 <li> Frontend development </li>
                 <li> Automated Documentation </li>
                 <li> Implementing Logs, Traces and Monitors </li>
-                <li> Alerting systmes based on monitoring </li>
+                <li> Alerting systems based on monitoring </li>
             </ul>
         </section>
         <section class="education">
-            <h2>Education</h2>
-            <p>Bachelor's Degree Computer Engineering and Information Technology with a Major in Cybersecurity</p>
-            <p>- Universidad del Valle de Guatemala</p>
+            <h2>EDUCATION</h2>
+            <div class="paragraph">Bachelor's Degree Computer Engineering and Information Technology with a Minor in Cybersecurity</div>
+            <div class="paragraph left-p">Universidad del Valle de Guatemala</div>
         </section>
         <section class="technologies">
-            <h2>Tenchnologies</h2>
-            <div id="list-technologies">
-            </div>
+            <h2>TECHNOLOGIES</h2>
+            <h3>Programing Languages</h3>
+            <div id="list-programs"></div>
+            <h3>Frameworks</h3>
+            <div id="list-frameworks"></div>
+            <h3>Other</h3>
+            <div id="list-technologies"></div>
         </section>
         <footer>
             
@@ -179,22 +195,32 @@ a {
 </html>
 
 <script>
-var techList = ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "React", "Nuxt", "Next", "Golang", "Gorm", "Python", "Django", "PHP", "C", "C++", "C#", "R", "Postgres", "MySQL", "GRPC", "MongoDB", "Git", "AWS", "GCP", "Atlassian", "Jira", "Trello", "Notion", "Swagger", "Postman", "Readme", "DataDog", "PagerDuty"]
+var programsList = ["Golang", "Python", "PHP", "C", "C++", "C#", "R", "SQL", "Bash", "Kotlin", "HTML/CSS", "JavaScript", "TypeScript"]
+var fwList = ["Vue", "React", "Angular", "Nuxt", "Next", "Django", "Bootstrap", "TensorFlow", "PyTorch", "Pandas", "NumPy"]
+var techList = ["Gorm", "Postgres", "MySQL", "GRPC", "MongoDB", "Git", "AWS", "GCP", "Atlassian", "Jira", "Trello", "Notion", "Swagger", "Postman", "Readme", "DataDog", "PagerDuty"]
 
-var container = document.getElementById('list-technologies');
+var containerP = document.getElementById('list-programs');
+var containerF = document.getElementById('list-frameworks');
+var containerT = document.getElementById('list-technologies');
 
 // Loop through the list and create a div for each item
-techList.forEach(function(item) {
-    // Create a new div element
-    var div = document.createElement('div');
-    
-    // Assign a class to the div for styling (optional)
-    div.className = 'item';
+function DivList(itemList, container) {
+    itemList.forEach(function(item) {
+        
+        // Create a new div element
+        var div = document.createElement('div');
+        
+        // Assign a class to the div for styling (optional)
+        div.className = 'item';
 
-    // Set the content of the div to the current item in the list
-    div.textContent = item;
+        // Set the content of the div to the current item in the list
+        div.textContent = item;
 
-    // Append the div to the container
-    container.appendChild(div);
-});
+        // Append the div to the container
+        container.appendChild(div);
+    });
+}
+DivList(programsList, containerP)
+DivList(fwList, containerF)
+DivList(techList, containerT)
 </script>
