@@ -1,158 +1,152 @@
 <!DOCTYPE html>
-<style>
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400");
-
-html *
-{
-    background-color: #FFFFFF;
-    color: #070707 !important;
-    font-family: "Roboto", sans-serif !important;
-}
-
-body {
-  width: 21cm;
-  height: 29.7cm;
-  margin: 0 auto;
-}
-
-/* Printing */
-page {
-  background: white;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
-}
-
-page[size="A4"] {  
-  width: 21cm;
-  height: 29.7cm; 
-}
-
-@page {
-   size: 21cm 29.7cm;
-   padding: 0;
-   margin: 0mm;
-   border: none;
-   border-collapse: collapse;
-}
-/* End Printing */
-
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-section {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.persona{
-    display: flex;
-    flex-direction: column;
-}
-
-.joseblock {
-    color: #070707 !important;
-    font-weight: bold;
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
-}
-
-.profesion {
-    background-color: #19647E;
-    color: #FFFFFF !important;
-    font-size: 1.2rem;
-    font-weight: bolder !important;
-    height: 2rem;
-    text-align: center;
-}
-
-.paragraph {
-    text-align: justify;
-    padding: 5px 0px 5px 0px;
-}
-
-.left-p {
-    text-align: right;
-}
-
-h3 {
-    color: #19647E !important;
-}
-
-.section-title {
-    color: #070707 !important;
-    font-size: 1.5rem;
-    border-left: 1rem solid #28AFB0;
-    margin-top: 1rem;
-}
-
-a {
-    align-self: flex-end;
-    color: #070707 !important;
-    text-decoration: none;
-    width: fit-content;
-}
-
-a:hover {
-    color: #28AFB0 !important;
-    text-decoration: underline;
-}
-
-.exp-content {
-    display: flex;
-    flex-direction: row;
-}
-
-.timeline {
-    border-left: 3px dotted #28AFB0;
-    padding-left: 5px;
-}
-
-.timeline-item {
-    padding: 5px 0px 5px 20px;
-}
-
-.list-technologies {
-    display: flex;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.item {
-    background-color: #28AFB0;
-    border-radius: 10px;
-    color: #070707 !important;
-    padding: 0.5rem;
-    margin: 0.1rem;
-    display: inline-block;
-}
-</style>
-
 <html lang="en">
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400");
+
+    html *
+    {
+        background-color: #FFFFFF;
+        color: #070707 !important;
+        font-family: "Roboto", sans-serif !important;
+    }
+
+    body {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+    }
+
+    /* Printing */
+    page {
+        background: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+    }
+
+    page[size="A4"] {  
+        width: 21cm;
+        height: 29.7cm; 
+    }
+
+    @page {
+        size: 21cm 29.7cm;
+        padding: 0;
+        margin: 0mm;
+        border: none;
+        border-collapse: collapse;
+    }
+    /* End Printing */
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .persona{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .joseblock {
+        color: #070707 !important;
+        font-weight: bold;
+        font-size: 1.5cm;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profesion {
+        background-color: #19647E;
+        color: #FFFFFF !important;
+        font-size: 0.5cm;
+        font-weight: bolder !important;
+        height: 1cm;
+        text-align: center;
+    }
+
+    .paragraph {
+        text-align: justify;
+        padding: 0.5cm 0cm 0.5cm 0cm;
+    }
+
+    .right-p {
+        text-align: right;
+    }
+
+    h3 {
+        color: #19647E !important;
+    }
+
+    .section-title {
+        color: #070707 !important;
+        font-size: 0.8cm;
+        border-left: 0.5cm solid #28AFB0;
+        margin-top: 0.5cm;
+    }
+
+    a {
+        align-self: flex-end;
+        color: #070707 !important;
+        text-decoration: none;
+        width: fit-content;
+    }
+
+    a:hover {
+        color: #28AFB0 !important;
+        text-decoration: underline;
+    }
+
+    .exp-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .timeline {
+        border-left: 0.1cm dotted #28AFB0;
+        padding-left: 0.2cm;
+    }
+
+    .timeline-item {
+        padding: 0.15cm 0cm 0.15cm 0.5cm;
+    }
+
+    .list-technologies {
+        display: flex;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        background-color: #28AFB0;
+        border-radius: 0.2cm;
+        color: #070707 !important;
+        padding: 0.2cm;
+        margin: 0.1cm;
+        display: inline-block;
+    }
+</style>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Jose's Resume</title>
 </head>
 <body>
     <page size="A4">
         <div class="container">
-            <header>
-                <div class="persona">
-                    <div class="profesion"></div>
-                    <div class="joseblock">Jose Block</div>
-                    <div class="profesion">Software Engineer</div>
-                </div>
-            </header>
-            <section class="about">
+            <div class="persona">
+                <div class="profesion"></div>
+                <div class="joseblock">Jose Block</div>
+                <div class="profesion">Software Engineer</div>
+            </div>
+            <div class="about">
                 <div class="section-title">ABOUT ME</div>
                 <div>
                     <div class="paragraph">
@@ -165,8 +159,8 @@ a:hover {
                         <a href="https://gt.linkedin.com/in/jose-gabriel-block-staackmann-138050153">Linkedin</a>
                     </div>
                 </div>
-            </section>
-            <section class="experience">
+            </div>
+            <div class="experience">
                 <div class="section-title">EXPERIENCE</div>
                 <div class="exp-content">
                     <div>
@@ -191,13 +185,13 @@ a:hover {
                         </ul>
                     </div>
                 </div>
-            </section>
-            <section class="education">
+            </div>
+            <div class="education">
                 <div class="section-title">EDUCATION</div>
                 <div class="paragraph">Bachelor's Degree Computer Engineering and Information Technology with a Minor in Cybersecurity</div>
-                <div class="paragraph left-p">Universidad del Valle de Guatemala</div>
-            </section>
-            <section class="technologies">
+                <div class="paragraph right-p">Universidad del Valle de Guatemala</div>
+            </div>
+            <div class="technologies">
                 <div class="section-title">TECHNOLOGIES</div>
                 <h3>Programing Languages</h3>
                 <div id="list-programs"></div>
@@ -205,10 +199,7 @@ a:hover {
                 <div id="list-frameworks"></div>
                 <h3>Other</h3>
                 <div id="list-technologies"></div>
-            </section>
-            <footer>
-                
-            </footer>
+            </div>
         </div>
     </page>
 </body>
@@ -226,17 +217,9 @@ var containerT = document.getElementById('list-technologies');
 // Loop through the list and create a div for each item
 function DivList(itemList, container) {
     itemList.forEach(function(item) {
-        
-        // Create a new div element
         var div = document.createElement('div');
-        
-        // Assign a class to the div for styling (optional)
         div.className = 'item';
-
-        // Set the content of the div to the current item in the list
         div.textContent = item;
-
-        // Append the div to the container
         container.appendChild(div);
     });
 }
