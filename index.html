@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jose Block – Technical Support & Integration Engineer</title>
-    <meta name="description" content="Jose Block: Technical Support & Integration Engineer with 5+ years at a Bitcoin fintech company. Go, Python, REST APIs, PostgreSQL, Lightning Network.">
+    <title>Jose Block</title>
+    <meta name="description" content="Jose Block: who I am, what I can do, and what I believe.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -69,218 +69,81 @@
             text-transform: uppercase;
         }
 
-        h3 { color: var(--dark); margin: 0.35cm 0 0.1cm; font-size: 1.05rem; }
-
         .paragraph { text-align: justify; margin: 0.1cm 0; }
 
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.15cm 0.5cm;
-            margin-top: 0.2cm;
+        .placeholder {
+            color: var(--muted);
+            font-style: italic;
+            border: 1px dashed var(--accent);
+            border-radius: 0.2cm;
+            padding: 0.2cm 0.3cm;
         }
-
-        .links a { font-weight: 500; }
-
-        .company { font-weight: 700; font-size: 1.1rem; margin-top: 0.2cm; }
-        .company span { font-weight: 400; color: var(--muted); font-size: 0.95rem; }
-
-        .timeline {
-            border-left: 0.1cm dotted var(--accent);
-            padding-left: 0.4cm;
-            margin-top: 0.2cm;
-        }
-
-        .role { margin-bottom: 0.4cm; }
-
-        .role-head {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 0 0.4cm;
-            align-items: baseline;
-        }
-
-        .role-title { color: var(--dark); font-weight: 700; }
-        .dates { color: var(--dark); font-weight: 500; white-space: nowrap; }
-        .role-note { color: var(--muted); font-style: italic; font-size: 0.9rem; }
 
         ul { margin: 0.1cm 0 0; padding-left: 0.5cm; }
-        li { margin: 0.06cm 0; }
+        li { margin: 0.15cm 0; }
         li::marker { color: var(--accent); }
+        li strong { color: var(--dark); }
 
-        .skill-group { margin-bottom: 0.15cm; }
-
-        .list-technologies { display: flex; flex-wrap: wrap; }
-
-        .item {
-            background-color: var(--accent);
-            border-radius: 0.2cm;
-            color: var(--text);
-            padding: 0.12cm 0.25cm;
-            margin: 0.08cm;
+        .more {
             display: inline-block;
-            font-size: 0.92rem;
+            margin-top: 0.25cm;
+            font-weight: 500;
+            color: var(--dark);
         }
+
+        footer {
+            border-top: 1px solid var(--accent);
+            margin: 0 0.4cm;
+            padding: 0.3cm 0 0.6cm;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        footer a { font-weight: 500; }
 
         @media (max-width: 600px) {
             .paragraph { text-align: left; }
             .persona { padding: 0.5cm 0.3cm 0.9cm; }
-        }
-
-        @media print {
-            .persona, .item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .role { break-inside: avoid; }
         }
     </style>
 </head>
 <body>
     <header class="persona">
         <h1>Jose Block</h1>
-        <div class="profesion">Technical Support &amp; Integration Engineer · Go, Python, APIs</div>
+        <div class="profesion">Follower of Jesus · Husband · Serving others</div>
     </header>
 
     <main>
         <section>
-            <h2 class="section-title">About me</h2>
-            <p class="paragraph">
-                Software engineer with 5+ years at a Bitcoin fintech company, working across frontend, backend,
-                and technical support. Experienced in troubleshooting and root cause analysis of production issues,
-                incident management, and coordinating fixes with engineering teams. Built REST APIs and backend
-                services in Go, integrated external exchanges, and managed Bitcoin Lightning Network node liquidity
-                with LND. Seeking a remote Technical Support or Integration Engineer role with hands-on coding.
-            </p>
-            <p class="paragraph">Based in Guatemala City, Guatemala · Open to remote work</p>
-            <nav class="links" aria-label="Contact">
-                <a href="mailto:blockmann3@gmail.com">blockmann3@gmail.com</a>
-                <a href="https://www.linkedin.com/in/jose-gabriel-block-staackmann-138050153/" rel="noopener">LinkedIn</a>
-            </nav>
+            <h2 class="section-title">Who am I?</h2>
+            <p class="paragraph">I'm someone who loves God, my wife, my family and friends, and solving problems. I like to be fully involved in the things that matter to me.</p>
         </section>
 
         <section>
-            <h2 class="section-title">Experience</h2>
-            <div class="company">IBEX Mercado <span>· Bitcoin payments and fintech · Guatemala City</span></div>
-            <div class="timeline">
-                <article class="role">
-                    <div class="role-head">
-                        <span class="role-title">Software / Support Engineer</span>
-                        <span class="dates">Jan 2025 – Sep 2026</span>
-                    </div>
-                    <div class="role-note">Support Engineer: Jan – Dec 2025 · Software / Support Engineer (Contractor): Jan – Sep 2026</div>
-                    <ul>
-                        <li>Resolved hundreds of support tickets for internal and external clients, investigating with SQL, logs, client input, and reproduction in production; separated product bugs from client errors and flagged recurring ones to product as UX improvements.</li>
-                        <li>Owned the support escalation process in 2026: triaged issues, set priority by customer impact, and routed them to a team of 3–4 senior engineers.</li>
-                        <li>Created Datadog monitors with alerts sent to Slack and PagerDuty, and identified, reported, and followed up on critical incidents with engineering teams.</li>
-                        <li>Improved support operations with Jira reporting dashboards to measure bug impact, and a workflow that turns Slack support requests into Linear tickets for internal and external clients.</li>
-                        <li>Integrated several external exchanges for multi-currency price rates and real-time quoting.</li>
-                        <li>Built back office APIs in Go: global data endpoints for the internal review dashboard, and user roles and permissions management so customer support could work from the back office while sensitive actions stayed restricted.</li>
-                        <li>Set up the public API documentation portal for client developers with Zudoku, generated from Swagger / OpenAPI specs and extended with written descriptions.</li>
-                        <li>Built a scheduled cleanup job for a PostgreSQL transactions table that deletes records in batches every 10 minutes based on transaction type and status, reducing the table size by about 25%; ran database migrations to remove legacy data structures and reduce costs.</li>
-                        <li>Managed liquidity on Lightning Network nodes with LND and RTL: analyzed channel inflow and outflow by counterparty, including major exchanges, to decide which channels to open or close, and executed circular rebalancing.</li>
-                    </ul>
-                </article>
-
-                <article class="role">
-                    <div class="role-head">
-                        <span class="role-title">Software Developer (Backend)</span>
-                        <span class="dates">Jan 2022 – Dec 2024</span>
-                    </div>
-                    <ul>
-                        <li>Built a notification microservice using AWS SES.</li>
-                        <li>Built a real-time currency price rate microservice used across the company's products.</li>
-                        <li>Implemented payment features such as split payments.</li>
-                    </ul>
-                </article>
-
-                <article class="role">
-                    <div class="role-head">
-                        <span class="role-title">Frontend Developer</span>
-                        <span class="dates">May 2021 – Dec 2021</span>
-                    </div>
-                    <ul>
-                        <li>Implemented a web-based Bitcoin payment terminal for fast invoicing.</li>
-                        <li>Built an internal back office dashboard for account and user management.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">Education</h2>
-            <div class="role-head">
-                <span class="role-title">B.S. in Computer Engineering and Information Technologies, Minor in Cybersecurity</span>
-                <span class="dates">Jan 2018 – Nov 2023</span>
-            </div>
-            <div>Universidad del Valle de Guatemala</div>
+            <h2 class="section-title">What can I do?</h2>
             <ul>
-                <li>Thesis: Bitcoin's Potential as a Payment Method and Its Technological Advances (Lightning Network, LND)</li>
+                <li>I help businesses and their developers connect to new products and get them working.</li>
+                <li>I find the cause of a problem and fix it at the source, not just the symptom.</li>
+                <li>I build the behind-the-scenes software that apps rely on.</li>
+                <li>I've spent 5+ years working with Bitcoin payments.</li>
+                <li>I speak Spanish and English.</li>
             </ul>
+            <a class="more" href="cv.html">Full CV →</a>
         </section>
 
         <section>
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title">Personal life</h2>
             <ul>
-                <li>Claude Certified Developer – Foundations (Anthropic) — in progress, exam expected October 2026</li>
+                <li>I'm very active and love to exercise. <a class="more" href="routine.html">See my routine →</a></li>
+                <li>I enjoy art and like making beautiful things, or at least trying.</li>
+                <li>I care about how things feel for the other person, and I like making people feel welcome.</li>
+                <li>I follow Jesus Christ. <a class="more" href="testimony.html">Read my testimony →</a></li>
             </ul>
-        </section>
-
-        <section>
-            <h2 class="section-title">Skills</h2>
-            <div class="skill-group">
-                <h3>Programming</h3>
-                <div class="list-technologies">
-                    <span class="item">Go</span><span class="item">Python</span><span class="item">JavaScript</span><span class="item">TypeScript</span><span class="item">SQL</span><span class="item">Bash</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Backend and APIs</h3>
-                <div class="list-technologies">
-                    <span class="item">REST APIs</span><span class="item">gRPC</span><span class="item">GORM</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Frontend</h3>
-                <div class="list-technologies">
-                    <span class="item">Vue</span><span class="item">HTML/CSS</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Databases</h3>
-                <div class="list-technologies">
-                    <span class="item">PostgreSQL</span><span class="item">Redis (basic)</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Support and monitoring</h3>
-                <div class="list-technologies">
-                    <span class="item">Troubleshooting</span><span class="item">Root cause analysis</span><span class="item">Incident management</span><span class="item">Datadog</span><span class="item">PagerDuty</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>API tools and docs</h3>
-                <div class="list-technologies">
-                    <span class="item">Postman</span><span class="item">Swagger / OpenAPI</span><span class="item">ReadMe</span><span class="item">Zudoku</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Bitcoin</h3>
-                <div class="list-technologies">
-                    <span class="item">Lightning Network</span><span class="item">LND (CLI, API)</span><span class="item">RTL</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Other tools</h3>
-                <div class="list-technologies">
-                    <span class="item">Git</span><span class="item">Auth0</span><span class="item">Jira</span><span class="item">Linear</span><span class="item">Slack</span><span class="item">Claude (AI-assisted development)</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Languages</h3>
-                <div class="list-technologies">
-                    <span class="item">Spanish (native)</span><span class="item">English (fluent)</span>
-                </div>
-            </div>
         </section>
     </main>
+
+    <footer>
+        Guatemala · <a href="https://www.linkedin.com/in/jose-gabriel-block-staackmann-138050153/" rel="noopener">LinkedIn</a>
+    </footer>
 </body>
 </html>

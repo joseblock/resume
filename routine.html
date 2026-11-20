@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jose Block – My Routine</title>
+    <meta name="description" content="Jose Block: my two-week training routine.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark: #19647E;
+            --accent: #28AFB0;
+            --text: #070707;
+            --muted: #4a5566;
+            --bg: #FFFFFF;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Roboto", sans-serif;
+            line-height: 1.5;
+        }
+
+        body {
+            max-width: 21cm;
+            margin: 0 auto;
+        }
+
+        a { color: var(--text); text-decoration: none; }
+        a:hover, a:focus-visible { color: var(--accent); text-decoration: underline; }
+
+        .back { padding: 0.3cm 0.4cm; }
+
+        .persona {
+            background-image: linear-gradient(var(--dark), var(--accent), var(--bg));
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            padding: 0.6cm 0.4cm 1cm;
+            text-align: center;
+        }
+
+        .persona h1 {
+            margin: 0;
+            color: #FFFFFF;
+            font-size: clamp(2rem, 8vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .persona .profesion {
+            color: #FFFFFF;
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-weight: 700;
+            margin-top: 0.15cm;
+        }
+
+        main { padding: 0 0.4cm 0.8cm; }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 500;
+            border-left: 0.5cm solid var(--accent);
+            padding-left: 0.25cm;
+            margin: 0.7cm 0 0.25cm;
+            text-transform: uppercase;
+        }
+
+        .tab-input { position: absolute; opacity: 0; pointer-events: none; }
+
+        .tabs {
+            display: flex;
+            gap: 0.2cm;
+            margin: 0.6cm 0 0.3cm;
+        }
+
+        .tabs label {
+            flex: 1;
+            text-align: center;
+            padding: 0.25cm;
+            border: 1px solid var(--accent);
+            border-radius: 0.2cm;
+            font-weight: 700;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        #w1:checked ~ .tabs label[for="w1"],
+        #w2:checked ~ .tabs label[for="w2"] {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+
+        #w1:focus-visible ~ .tabs label[for="w1"],
+        #w2:focus-visible ~ .tabs label[for="w2"] {
+            outline: 2px solid var(--dark);
+            outline-offset: 2px;
+        }
+
+        .week { display: none; }
+        #w1:checked ~ #week1,
+        #w2:checked ~ #week2 { display: block; }
+
+        details {
+            border: 1px solid var(--accent);
+            border-radius: 0.2cm;
+            margin: 0.2cm 0;
+            padding: 0 0.3cm;
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 0.25cm 0;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        summary span { font-weight: 400; color: var(--muted); }
+
+        h3 { color: var(--dark); margin: 0.3cm 0 0.05cm; font-size: 1rem; }
+
+        ul { margin: 0 0 0.2cm; padding-left: 0.5cm; }
+        li { margin: 0.04cm 0; }
+        li::marker { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <nav class="back" aria-label="Site"><a href="index.html">← Back</a></nav>
+    <header class="persona">
+        <h1>My Routine</h1>
+        <div class="profesion">Two-week training cycle</div>
+    </header>
+
+    <main>
+        <input class="tab-input" type="radio" name="week" id="w1" checked>
+        <input class="tab-input" type="radio" name="week" id="w2">
+        <div class="tabs">
+            <label for="w1">Week 1</label>
+            <label for="w2">Week 2</label>
+        </div>
+
+        <section class="week" id="week1" aria-label="Week 1">
+
+            <details>
+                <summary>Day 1 – Squat Day <span>· Lower body strength</span></summary>
+                <h3>Warm-Up (8–10 min)</h3>
+                <ul>
+                    <li>3–5 min incline walk or bike</li>
+                    <li>Hip circles ×10/side</li>
+                    <li>Bodyweight squats ×15</li>
+                    <li>Glute bridges ×15</li>
+                    <li>Ankle rocks ×10/side</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Back Squat — 4×6 — 215–235 lbs</li>
+                    <li>Bulgarian Split Squat — 3×10/leg — 35 lbs/side</li>
+                    <li>Romanian Deadlift (RDL) — 2×10 — 215–235 lbs</li>
+                    <li>Standing Calf Raises — 3×15</li>
+                </ul>
+                <h3>Core</h3>
+                <ul>
+                    <li>Plank Variations — 3×40 sec</li>
+                </ul>
+                <h3>Shoulder Health</h3>
+                <ul>
+                    <li>Band External Rotations — 2×15</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Seated Hamstring Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 90 sec/side</li>
+                    <li>Calf Wall Stretch — 45 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 2 – Bench Press Day <span>· Upper push</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Arm circles ×15</li>
+                    <li>Band pull-aparts ×20</li>
+                    <li>Scapular push-ups ×12</li>
+                    <li>Light shoulder mobility</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Bench Press — 4×6 — 195 lbs</li>
+                    <li>Overhead Press — 3×8 — 50 lbs</li>
+                    <li>Incline Dumbbell Press — 3×10 — 45–50 lbs</li>
+                    <li>Lateral Raises — 3×12 — 25 lbs</li>
+                    <li>Triceps Dips — 3×12</li>
+                </ul>
+                <h3>Shoulder Stability</h3>
+                <ul>
+                    <li>Scapular Wall Slides — 2×12</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose with Side Reach — 45 sec/side</li>
+                    <li>Thoracic Open Books — 10 reps/side</li>
+                    <li>Neck Stretch — 30 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 3 – Recovery + Mobility</summary>
+                <h3>Zone 2 Cardio</h3>
+                <ul>
+                    <li>Walk / Bike / Swim</li>
+                    <li>30–40 min conversational pace</li>
+                </ul>
+                <h3>Mobility Flow</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Calf Stretch — 45 sec/side</li>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose Side Reach — 45 sec/side</li>
+                    <li>Open Books — 10 reps/side</li>
+                    <li>Deep Breathing Reset — 3–5 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 4 – Deadlift Day <span>· Posterior chain</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Cat-cow ×10</li>
+                    <li>Hip hinges ×15</li>
+                    <li>Glute bridges ×15</li>
+                    <li>Bird dogs ×10/side</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Deadlift — 4×6 — 285 lbs — rest 2 min</li>
+                    <li>Barbell Row — 4×8 — 165–185 lbs — rest 90 sec</li>
+                    <li>Walking Lunges — 3×10/leg — 40–55 lbs — rest 90 sec</li>
+                    <li>Hanging Leg Raises — 3×12 — rest 90 sec</li>
+                </ul>
+                <h3>Carries</h3>
+                <ul>
+                    <li>Farmer Carries — 3×40 m — 70 lbs</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Child’s Pose — 1 min</li>
+                    <li>Thoracic Open Books — 10 reps/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 5 – Pull-Up Day <span>· Upper pull</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Band pull-aparts ×20</li>
+                    <li>Scapular pull-ups ×10</li>
+                    <li>Shoulder circles ×15</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Pull-Ups — 4×max reps</li>
+                    <li>Chest-Supported Row — 4×10 — 40 lbs</li>
+                    <li>Inverted Rows — 3×8</li>
+                    <li>Dumbbell or Barbell Curls — 3×10 — 33 lbs</li>
+                    <li>Face Pulls — 3×12</li>
+                    <li>Farmer Carries — 3×40 m — 70 lbs</li>
+                </ul>
+                <h3>Shoulder Health</h3>
+                <ul>
+                    <li>Band External Rotations — 2×15</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose Side Reach — 45 sec/side</li>
+                    <li>Open Books — 10 reps/side</li>
+                    <li>Forearm Stretch — 30 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 6 – Optional Recovery</summary>
+                <h3>Option A</h3>
+                <ul>
+                    <li>20–30 min walk</li>
+                    <li>15 min mobility flow</li>
+                    <li>Foam rolling</li>
+                </ul>
+                <h3>Option B</h3>
+                <ul>
+                    <li>Easy bike</li>
+                    <li>Easy swim</li>
+                    <li>Incline treadmill walk</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose — 1 min</li>
+                    <li>Deep Breathing — 5 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 7 – Full Rest</summary>
+                <h3>Optional</h3>
+                <ul>
+                    <li>Light walk</li>
+                    <li>Stretch lightly</li>
+                    <li>Breathing exercises</li>
+                </ul>
+                <h3>Breathing Routine</h3>
+                <ul>
+                    <li>Inhale — 4 sec</li>
+                    <li>Exhale — 6 sec</li>
+                </ul>
+            </details>
+        </section>
+
+        <section class="week" id="week2" aria-label="Week 2">
+
+            <details>
+                <summary>Day 1 – Front Squat Variation Day</summary>
+                <h3>Warm-Up (8–10 min)</h3>
+                <ul>
+                    <li>3–5 min incline walk or bike</li>
+                    <li>Hip circles ×10/side</li>
+                    <li>Bodyweight squats ×15</li>
+                    <li>Glute bridges ×15</li>
+                    <li>Ankle rocks ×10/side</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Front Squat — 4×6 — 185–205 lbs</li>
+                    <li>Step-Ups — 3×12/leg — 35 lbs ×2</li>
+                    <li>Hip Thrusts — 3×10 — 165–195 lbs</li>
+                    <li>Single-Leg Calf Raises — 3×15</li>
+                </ul>
+                <h3>Core</h3>
+                <ul>
+                    <li>Side Plank with Reach — 3×30 sec/side</li>
+                </ul>
+                <h3>Shoulder Health</h3>
+                <ul>
+                    <li>Band External Rotations — 2×15</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Calf Stretch — 45 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 2 – Bench Variation Day <span>· Upper push</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Arm circles ×15</li>
+                    <li>Band pull-aparts ×20</li>
+                    <li>Scapular push-ups ×12</li>
+                    <li>Light shoulder mobility</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Close-Grip Bench Press — 4×6 — 185 lbs</li>
+                    <li>Dumbbell Overhead Press — 3×8 — 50 lbs</li>
+                    <li>Ring Push-Ups — 3×max reps</li>
+                    <li>Arnold Press — 3×10 — 40 lbs</li>
+                    <li>Skull Crushers — 3×12 — 32 lbs</li>
+                </ul>
+                <h3>Shoulder Stability</h3>
+                <ul>
+                    <li>Scapular Wall Slides — 2×12</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose with Side Reach — 45 sec/side</li>
+                    <li>Thoracic Open Books — 10 reps/side</li>
+                    <li>Neck Stretch — 30 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 3 – Recovery + Mobility</summary>
+                <h3>Zone 2 Cardio</h3>
+                <ul>
+                    <li>Walk / Bike / Swim</li>
+                    <li>30–40 min conversational pace</li>
+                </ul>
+                <h3>Mobility Flow</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Calf Stretch — 45 sec/side</li>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose Side Reach — 45 sec/side</li>
+                    <li>Open Books — 10 reps/side</li>
+                    <li>Deep Breathing Reset — 3–5 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 4 – Deadlift Variation Day <span>· Posterior chain</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Cat-cow ×10</li>
+                    <li>Hip hinges ×15</li>
+                    <li>Glute bridges ×15</li>
+                    <li>Bird dogs ×10/side</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Deficit Deadlift or Block Pulls — 4×4 — 285 lbs</li>
+                    <li>Pendlay Row — 4×8 — 55 lbs/arm (dumbbells) or 175 lbs (barbell)</li>
+                    <li>Bulgarian Split Squat — 3×10/leg — 35 lbs ×2</li>
+                    <li>Good Mornings — 3×12 — 135 lbs</li>
+                    <li>Ab Wheel Rollouts — 3×10</li>
+                </ul>
+                <h3>Carries</h3>
+                <ul>
+                    <li>Farmer Carries — 3×40 m — 50 lbs ×2</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Child’s Pose — 1 min</li>
+                    <li>Thoracic Open Books — 10 reps/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 5 – Pull Variation Day <span>· Upper pull</span></summary>
+                <h3>Warm-Up</h3>
+                <ul>
+                    <li>Band pull-aparts ×20</li>
+                    <li>Scapular pull-ups ×10</li>
+                    <li>Shoulder circles ×15</li>
+                </ul>
+                <h3>Main Lifts</h3>
+                <ul>
+                    <li>Chin-Ups — 4×max reps</li>
+                    <li>Chest-Supported Row — 4×10 — 40 lbs/arm</li>
+                    <li>Hammer Curls — 3×12 — 35 lbs</li>
+                    <li>Rear Delt Fly — 3×12 — 20–30 lbs</li>
+                    <li>Farmer Carries — 3×40 m — 70 lbs</li>
+                </ul>
+                <h3>Shoulder Health</h3>
+                <ul>
+                    <li>Band External Rotations — 2×15</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Doorway Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose Side Reach — 45 sec/side</li>
+                    <li>Open Books — 10 reps/side</li>
+                    <li>Forearm Stretch — 30 sec/side</li>
+                    <li>Deep Breathing Reset — 2 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 6 – Optional Recovery</summary>
+                <h3>Option A</h3>
+                <ul>
+                    <li>20–30 min walk</li>
+                    <li>15 min mobility flow</li>
+                    <li>Foam rolling</li>
+                </ul>
+                <h3>Option B</h3>
+                <ul>
+                    <li>Easy bike</li>
+                    <li>Easy swim</li>
+                    <li>Incline treadmill walk</li>
+                </ul>
+                <h3>Mobility</h3>
+                <ul>
+                    <li>Couch Stretch — 1 min/side</li>
+                    <li>Hamstring Stretch — 1 min/side</li>
+                    <li>Pigeon Stretch — 1 min/side</li>
+                    <li>Pec Stretch — 45 sec/side</li>
+                    <li>Child’s Pose — 1 min</li>
+                    <li>Deep Breathing — 5 min</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Day 7 – Full Rest</summary>
+                <h3>Optional</h3>
+                <ul>
+                    <li>Light walk</li>
+                    <li>Stretch lightly</li>
+                    <li>Breathing exercises</li>
+                </ul>
+                <h3>Breathing Routine</h3>
+                <ul>
+                    <li>Inhale — 4 sec</li>
+                    <li>Exhale — 6 sec</li>
+                </ul>
+            </details>
+        </section>
+    </main>
+</body>
+</html>
