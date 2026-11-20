@@ -37,12 +37,22 @@
 
         .back { padding: 0.3cm 0.4cm; }
 
+        /* Calm shore: deep water to shallow water, with a wave edge of sand fading into the page */
         .persona {
-            background-image: linear-gradient(var(--dark), var(--accent), var(--bg));
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            padding: 0.6cm 0.4cm 1cm;
+            position: relative;
+            background-image: linear-gradient(var(--dark), var(--accent) 65%, #BFE6E2);
+            padding: 0.6cm 0.4cm 1.8cm;
             text-align: center;
+        }
+
+        .persona::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 1.3cm;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23EFE3CC'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,28 C150,58 300,2 450,22 C600,50 750,6 900,24 C1050,52 1130,12 1200,22 L1200,60 L0,60 Z' fill='url(%23s)'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat;
         }
 
         .persona h1 {
@@ -91,7 +101,7 @@
 
         @media (max-width: 600px) {
             .paragraph { text-align: left; }
-            .persona { padding: 0.5cm 0.3cm 0.9cm; }
+            .persona { padding: 0.5cm 0.3cm 1.7cm; }
         }
     </style>
 </head>
