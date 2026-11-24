@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="en" href="https://joseblock.com/cv">
+    <link rel="alternate" hreflang="es" href="https://joseblock.com/es/cv">
+    <link rel="alternate" hreflang="x-default" href="https://joseblock.com/cv">
+    <title>Jose Block – CV</title>
+    <meta name="description" content="Ingeniero de software con más de 5 años en una fintech B2B SaaS de pagos (Bitcoin y Lightning Network), en desarrollo backend, integraciones con clientes y soporte técnico.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark: #19647E;
+            --accent: #28AFB0;
+            --text: #070707;
+            --muted: #4a5566;
+            --bg: #FFFFFF;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Roboto", sans-serif;
+            line-height: 1.5;
+        }
+
+        body {
+            max-width: 21cm;
+            margin: 0 auto;
+        }
+
+        a { color: var(--text); text-decoration: none; }
+        a:hover, a:focus-visible { color: var(--accent); text-decoration: underline; }
+
+        /* Calm shore: deep water to shallow water, with a wave edge of sand fading into the page */
+        .persona {
+            position: relative;
+            background-image: linear-gradient(var(--dark), var(--accent) 65%, #BFE6E2);
+            padding: 0.6cm 0.4cm 1.8cm;
+            text-align: center;
+        }
+
+        .persona::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 1.3cm;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23EFE3CC'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,28 C150,58 300,2 450,22 C600,50 750,6 900,24 C1050,52 1130,12 1200,22 L1200,60 L0,60 Z' fill='url(%23s)'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat;
+        }
+
+        .lang {
+            position: absolute;
+            top: 0.25cm;
+            right: 0.4cm;
+            z-index: 1;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+
+        .lang a { color: #FFFFFF; }
+
+        .persona h1 {
+            margin: 0;
+            color: #FFFFFF;
+            font-size: clamp(2rem, 8vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .persona .profesion {
+            color: #FFFFFF;
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-weight: 700;
+            margin-top: 0.15cm;
+        }
+
+        main { padding: 0 0.4cm 0.8cm; }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 500;
+            border-left: 0.5cm solid var(--accent);
+            padding-left: 0.25cm;
+            margin: 0.7cm 0 0.25cm;
+            text-transform: uppercase;
+        }
+
+        h3 { color: var(--dark); margin: 0.35cm 0 0.1cm; font-size: 1.05rem; }
+
+        .paragraph { text-align: justify; margin: 0.1cm 0; }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.15cm 0.5cm;
+            margin-top: 0.2cm;
+        }
+
+        .links a { font-weight: 500; }
+
+        .company { font-weight: 700; font-size: 1.1rem; margin-top: 0.2cm; }
+        .company span { font-weight: 400; color: var(--muted); font-size: 0.95rem; }
+
+        .timeline {
+            border-left: 0.1cm dotted var(--accent);
+            padding-left: 0.4cm;
+            margin-top: 0.2cm;
+        }
+
+        .role { margin-bottom: 0.4cm; }
+
+        .role-head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0 0.4cm;
+            align-items: baseline;
+        }
+
+        .role-title { color: var(--dark); font-weight: 700; }
+        .dates { color: var(--dark); font-weight: 500; white-space: nowrap; }
+        .role-note { color: var(--muted); font-style: italic; font-size: 0.9rem; }
+
+        ul { margin: 0.1cm 0 0; padding-left: 0.5cm; }
+        li { margin: 0.06cm 0; }
+        li::marker { color: var(--accent); }
+
+        .skill-group { margin-bottom: 0.15cm; }
+
+        .list-technologies { display: flex; flex-wrap: wrap; }
+
+        .item {
+            background-color: var(--accent);
+            border-radius: 0.2cm;
+            color: var(--text);
+            padding: 0.12cm 0.25cm;
+            margin: 0.08cm;
+            display: inline-block;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 600px) {
+            .paragraph { text-align: left; }
+            .persona { padding: 0.5cm 0.3cm 1.7cm; }
+        }
+
+        .back { padding: 0.3cm 0.4cm; }
+
+        @media print {
+            .no-print { display: none; }
+            .persona, .item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .role { break-inside: avoid; }
+            .persona {
+                background-image: linear-gradient(var(--dark), var(--accent), var(--bg));
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                padding: 0.6cm 0.4cm 1cm;
+            }
+            .persona::after { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="back no-print"><a href="index.html">← Volver</a></nav>
+    <header class="persona">
+        <nav class="lang no-print" aria-label="Idioma"><a href="../cv.html" hreflang="en" lang="en">EN</a> · <strong>ES</strong></nav>
+        <h1>Jose Block</h1>
+        <div class="profesion">Ingeniero · Software, Integraciones y Soporte</div>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="paragraph">
+                Ingeniero de software con más de 5 años en una fintech B2B SaaS de pagos (Bitcoin y Lightning
+                Network), trabajando en desarrollo backend, integraciones con clientes y soporte técnico.
+                Construí servicios REST y gRPC en Go, integré exchanges externos y ayudé a desarrolladores
+                de clientes a integrar la API de la empresa. Reduje el volumen de tickets de soporte en
+                aproximadamente un 50 % y fui responsable del proceso de escalamiento de soporte. Busco un
+                puesto remoto como Software, Integration, Solutions o Forward Deployed Engineer, programando.
+            </p>
+            <p class="paragraph">Guatemala · Disponible para trabajo remoto</p>
+            <nav class="links" aria-label="Contacto">
+                <a href="mailto:blockmann3@gmail.com">blockmann3@gmail.com</a>
+                <a href="https://www.linkedin.com/in/jose-gabriel-block-staackmann-138050153/" rel="noopener">LinkedIn</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2 class="section-title">Experiencia</h2>
+            <div class="company">IBEX Mercado <span>· Fintech B2B SaaS de pagos (Bitcoin y Lightning Network)</span></div>
+            <div class="timeline">
+                <article class="role">
+                    <div class="role-head">
+                        <span class="role-title">Ingeniero de Software / Soporte</span>
+                        <span class="dates">ene 2025 – sep 2026</span>
+                    </div>
+                    <div class="role-note">Ingeniero de Soporte: ene – dic 2025 · Ingeniero de Software / Soporte (contratista): ene – sep 2026</div>
+                    <ul>
+                        <li>Reduje el volumen de tickets de soporte en aproximadamente un 50 %: creé dashboards en Jira para medir tipos y volumen de tickets, identifiqué las causas principales (transacciones fallidas por baja liquidez en Lightning, errores de despliegue en producción y problemas recurrentes de frontend), asumí la gestión de la liquidez de los nodos, impulsé al equipo de infraestructura a corregir el proceso de despliegue, corregí problemas recurrentes de frontend y ayudé a capacitar a los equipos de atención al cliente sobre malentendidos comunes de nuestros servicios.</li>
+                        <li>Participé en llamadas técnicas con desarrolladores de clientes para ayudarlos a integrar la API de la empresa, y realicé demostraciones del producto.</li>
+                        <li>Resolví cientos de tickets de soporte para clientes internos y externos, reproduciendo problemas e investigando con SQL, logs, DevTools del navegador, información del cliente y el código en GitHub; separé errores del producto de errores del cliente y reporté los recurrentes al equipo de producto como mejoras de UX.</li>
+                        <li>Fui responsable del proceso de escalamiento de soporte en 2026: clasifiqué incidencias, definí prioridades según el impacto en el cliente y asigné el trabajo entre mí y un equipo de 3–4 ingenieros senior.</li>
+                        <li>Creé monitores en Datadog con alertas a Slack y PagerDuty, y di seguimiento a incidentes críticos con ingeniería.</li>
+                        <li>Integré varios exchanges externos para tasas de cambio, cotizaciones en tiempo real y colocación de órdenes.</li>
+                        <li>Construí APIs de back office en Go, incluida la gestión de roles y permisos de usuario para atención al cliente.</li>
+                        <li>Configuré el portal público de documentación de la API con Zudoku, generado a partir de especificaciones Swagger / OpenAPI.</li>
+                        <li>Construí un proceso programado de limpieza en PostgreSQL que redujo una tabla de transacciones en aproximadamente un 25 %; ejecuté migraciones para eliminar datos heredados y reducir costos.</li>
+                        <li>Gestioné la liquidez de nodos de Lightning Network con LND y RTL: análisis de flujo de canales y rebalanceo circular.</li>
+                    </ul>
+                </article>
+
+                <article class="role">
+                    <div class="role-head">
+                        <span class="role-title">Desarrollador de Software (Backend)</span>
+                        <span class="dates">ene 2022 – dic 2024</span>
+                    </div>
+                    <ul>
+                        <li>Construí en Go un microservicio de tasas de cambio de divisas en tiempo real, usado en los productos de la empresa.</li>
+                        <li>Construí un microservicio de notificaciones con AWS SES, y servicios gRPC en Go con pruebas unitarias.</li>
+                        <li>Implementé funciones de pago como pagos divididos.</li>
+                    </ul>
+                </article>
+
+                <article class="role">
+                    <div class="role-head">
+                        <span class="role-title">Desarrollador Frontend</span>
+                        <span class="dates">may 2021 – dic 2021</span>
+                    </div>
+                    <ul>
+                        <li>Implementé una terminal de pago web de Bitcoin para facturación rápida.</li>
+                        <li>Construí un dashboard interno de back office para la gestión de cuentas y usuarios.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Educación</h2>
+            <div class="role-head">
+                <span class="role-title">Ingeniería en Ciencias de la Computación y Tecnologías de la Información</span>
+                <span class="dates">ene 2018 – nov 2023</span>
+            </div>
+            <div>Universidad del Valle de Guatemala</div>
+            <ul>
+                <li>Minor en Ciberseguridad</li>
+                <li>Tesis sobre Bitcoin como método de pago (Lightning Network, LND)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certificaciones</h2>
+            <ul>
+                <li>Claude Certified Developer – Foundations (Anthropic) — en curso</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skill-group">
+                <h3>Programación</h3>
+                <div class="list-technologies">
+                    <span class="item">Go</span><span class="item">Python</span><span class="item">JavaScript</span><span class="item">TypeScript</span><span class="item">SQL</span><span class="item">Bash</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Backend y APIs</h3>
+                <div class="list-technologies">
+                    <span class="item">REST APIs</span><span class="item">gRPC</span><span class="item">GORM</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Frontend</h3>
+                <div class="list-technologies">
+                    <span class="item">Vue</span><span class="item">HTML/CSS</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Bases de datos</h3>
+                <div class="list-technologies">
+                    <span class="item">PostgreSQL</span><span class="item">Redis (básico)</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Soporte y monitoreo</h3>
+                <div class="list-technologies">
+                    <span class="item">Resolución de problemas</span><span class="item">Análisis de causa raíz</span><span class="item">Gestión de incidentes</span><span class="item">Datadog</span><span class="item">PagerDuty</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Herramientas y documentación de APIs</h3>
+                <div class="list-technologies">
+                    <span class="item">Postman</span><span class="item">Swagger / OpenAPI</span><span class="item">ReadMe</span><span class="item">Zudoku</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Bitcoin</h3>
+                <div class="list-technologies">
+                    <span class="item">Lightning Network</span><span class="item">LND (CLI, API)</span><span class="item">RTL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Otras herramientas</h3>
+                <div class="list-technologies">
+                    <span class="item">Git</span><span class="item">Auth0</span><span class="item">Jira</span><span class="item">Linear</span><span class="item">Slack</span><span class="item">Claude (desarrollo asistido por IA)</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Idiomas</h3>
+                <div class="list-technologies">
+                    <span class="item">Español (nativo)</span><span class="item">Inglés (fluido)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
